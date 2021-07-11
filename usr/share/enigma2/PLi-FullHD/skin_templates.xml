@@ -408,6 +408,81 @@
 		</widget>
 		<!--<ePixmap pixmap="icons/icon_update_off.png" position="90,52" size="30,30" zPosition="0" alphatest="blend"/>-->
 	</screen>
-
+  <screen name="TemplateRemoteControl">
+    <!--
+	 |	For the key indicator pixmaps, "position" is used for
+	 |	the position of the pixmap "hotspot".
+	 |	The screen positions the pixmap relative to the
+	 |	hotspot, not the pixmap's top left corner
+	 +-->
+    <widget name="indicatorU0" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU1" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU2" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU3" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU4" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU5" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU6" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU7" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU8" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU9" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU10" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU11" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU12" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU13" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU14" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorU15" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL0" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL1" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL2" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL3" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL4" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL5" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL6" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL7" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL8" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL9" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL10" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL11" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL12" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL13" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL14" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+    <widget name="indicatorL15" pixmap="rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="11" />
+  </screen>
+    <!-- E-Panel -->    
+    <screen name="Templates_EP_LG">
+       <widget source="menu" render="Listbox" position="835,100" size="1000,900" scrollbarMode="showOnDemand" transparent="1">
+           <convert type="TemplatedMultiContent">
+	      {
+	           "template": [
+		               MultiContentEntryText(pos = (100, 12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		               MultiContentEntryText(pos = (110, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+		               MultiContentEntryPixmapAlphaTest(pos = (5, 23), size = (150, 60), png = 2), # index 4 is the pixmap
+		               MultiContentEntryText(pos=(5,89), size=(990, 1), border_width=1, border_color=0x666666 ), # border			
+			   ],
+	           "fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+	           "itemHeight": 90
+	      }
+	      </convert>
+	  </widget>
+    </screen>
+    <screen name="Templates_EP_BG">
+        <widget source="menu" render="Listbox" position="835,100" size="1000,900" scrollbarMode="showOnDemand" transparent="1">
+            <convert type="TemplatedMultiContent">
+	      {
+	            "template": [
+		                MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+		                MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+		                MultiContentEntryPixmapAlphaTest(pos = (5, 23), size = (150, 60), png = 3), # index 4 is the pixmap
+		                MultiContentEntryText(pos=(5,89), size=(990, 1), border_width=1, border_color=0x666666 ), # border	
+			   ],
+	           "fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+	           "itemHeight": 90
+	      }
+	      </convert>
+      </widget>		  
+    </screen>
+    <screen name="Templates_EP_CON">
+        <widget name="config" position="835,100" size="1000,882" font="Regular; 30" itemHeight="42" scrollbarMode="showOnDemand" transparent="1" />
+    </screen>
 </skin>
 
