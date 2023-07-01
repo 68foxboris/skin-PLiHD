@@ -3212,7 +3212,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<panel name="LogManagerViewLog" />
 	</screen>
   <!-- HistoryZapSelector -->
-	<screen name="HistoryZapSelector" position="30,105" size="1100,900" flags="wfBorder">
+	<screen name="HistoryZapSelector" position="30,105" size="1100,900" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="0,0" size="1100,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
 		<convert type="TemplatedMultiContent">
 		{"template": [
