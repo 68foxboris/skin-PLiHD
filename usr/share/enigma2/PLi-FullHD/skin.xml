@@ -2768,8 +2768,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	  <!-- Network -->
 	<screen name="NetworkMacSetup" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,105" size="1110,836" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
-		<widget source="introduction" render="Label" position="780,975" size="1110,34" transparent="1" zPosition="10" font="Regular;30" verticalAlignment="center" horizontalAlignment="center" />
+		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,836" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+		<widget source="introduction" valueFont="Regular;30" render="Label" position="780,975" size="1110,34" transparent="1" zPosition="10" font="Regular;30" verticalAlignment="center" horizontalAlignment="center" />
 	</screen>
 	<screen name="IPv6Setup" position="fill" flags="wfNoBorder">
 		<panel name="NetworkMacSetup" />
@@ -2782,18 +2782,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<screen name="NetworkPassword" position="fill" zPosition="3" flags="wfNoBorder">
 		<panel name="PigTemplate" />
 		<panel name="VKeyIconPanel" />
-		<widget name="config" position="780,105" size="1110,646" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
-		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top" />
+		<widget name="config" valueFont="Regular;38" position="780,105" size="1110,646" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+		<widget name="description" valueFont="Regular;38" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top" />
 		<widget name="HelpWindow" position="75,615" size="1,1" transparent="1" zPosition="1" alphaTest="on" />
 		<widget name="footnote" position="780,955" size="1110,36" font="Regular; 30" horizontalAlignment="center" transparent="1" backgroundColor="black" foregroundColor="yellow" />
 	</screen>
 	<screen name="NetworkAfp" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="lab1" position="935,260" size="300,35" font="Regular; 30" transparent="1" />
-		<widget name="labactive" position="1335,260" size="450,35" font="Regular; 30" transparent="1" horizontalAlignment="center" />
-		<widget name="lab2" position="935,430" size="300,35" font="Regular; 30" transparent="1" />
-		<widget name="labstop" position="1335,430" size="450,35" font="Regular; 30" horizontalAlignment="center" backgroundColor="red" foregroundColor="black" />
-		<widget name="labrun" position="1335,430" size="450,35" font="Regular; 30" horizontalAlignment="center" backgroundColor="green" zPosition="1" foregroundColor="black" />
+		<widget name="lab1" valueFont="Regular;30" position="935,260" size="300,35" font="Regular; 30" transparent="1" />
+		<widget name="labactive" valueFont="Regular;30" position="1335,260" size="450,35" font="Regular; 30" transparent="1" horizontalAlignment="center" />
+		<widget name="lab2" valueFont="Regular;30" position="935,430" size="300,35" font="Regular; 30" transparent="1" />
+		<widget name="labstop" valueFont="Regular;30" position="1335,430" size="450,35" font="Regular; 30" horizontalAlignment="center" backgroundColor="red" foregroundColor="black" />
+		<widget name="labrun" valueFont="Regular;30" position="1335,430" size="450,35" font="Regular; 30" horizontalAlignment="center" backgroundColor="green" zPosition="1" foregroundColor="black" />
 	</screen>
 	<screen name="NetworkSamba" position="fill" flags="wfNoBorder">
 		<panel name="NetworkAfp" />
@@ -3216,10 +3216,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget source="menu" render="Listbox" position="0,0" size="1100,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
 		<convert type="TemplatedMultiContent">
 		{"template": [
-				MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_horizontalAlignment_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
-				MultiContentEntryText(pos = (190, 1), size = (610, 34), font = 1, flags = RT_horizontalAlignment_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
-				MultiContentEntryText(pos = (190, 36), size = (610, 60), font = 2, flags = RT_horizontalAlignment_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
-				MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_horizontalAlignment_CENTER, text = 5), # Eventtime
+				MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
+				MultiContentEntryText(pos = (190, 1), size = (610, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
+				MultiContentEntryText(pos = (190, 36), size = (610, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
+				MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
 				MultiContentEntryPixmapAlphaBlend(pos=(10, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
 			],
 		 "fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
