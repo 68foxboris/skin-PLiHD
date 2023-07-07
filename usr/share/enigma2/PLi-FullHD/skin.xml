@@ -2881,7 +2881,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="dlnainactive" position="1270,869" zPosition="1" pixmap="icons/lock_off.png" size="38,36" alphaTest="on" />
 		<widget name="dlnaactive" position="1270,869" zPosition="2" pixmap="icons/lock_on.png" size="38,36" alphaTest="on" />
 	</screen>
-	<screen name="uShareSetup" position="fill" flags="wfNoBorder">
+	<screen name="uShareSetup" valueFont="Regular;28" position="fill" flags="wfNoBorder">
 		<panel name="InadynSetup" />
 	</screen>
 	<screen name="uShareSelection" position="fill" flags="wfNoBorder">
@@ -3032,7 +3032,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget source="IFtext" render="Label" position="785,940" size="120,40" font="Regular; 30" horizontalAlignment="left" transparent="1" backgroundColor="black" />
 		<widget source="IF" position="910,940" size="400,40" render="Label" font="Regular; 30" verticalAlignment="center" transparent="1" backgroundColor="black" />
 		<widget source="Statustext" position="1507,940" size="300,40" render="Label" font="Regular; 30" horizontalAlignment="right" verticalAlignment="center" transparent="1" backgroundColor="black" />
-		<widget name="statuspic" position="1315,941" size="38,36" transparent="1" alphaTest="blend" pixmaps="icons/lock_on.png,icons/lock_off.png" />
+		<widget name="statuspic" position="1315,940" size="38,40" transparent="1" alphaTest="blend" pixmaps="icons/lock_on.png,icons/lock_off.png" />
 		<ePixmap pixmap="buttons/key_help.png" position="30,1032" size="52,38" alphaTest="on" />
 	</screen>
 	<screen name="Geolocation" position="fill" title="Geolocation" flags="wfNoBorder">
@@ -3265,7 +3265,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	</screen>
 	<screen name="YoutubeTVSettings" position="fill" title="YouTube TV Settings" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
 	</screen>
 	 <!-- Timer -->
 	<screen name="PowerTimerEntry" position="fill" flags="wfNoBorder">
@@ -3279,7 +3279,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	  <!-- Chromium -->
 	<screen name="ChromiumOSSettings" position="fill" title="ChromiumOS Settings">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="ChromiumOSHelpWindow" position="center,center" size="945,40" title="ChromiumOS Help">
 		<ePixmap pixmap="buttons/red.png" position="5,3" size="34,34" alphaTest="on" />
@@ -3293,7 +3293,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	</screen>
 	<screen name="ChromiumOSWindow" position="fill" title="Start ChromiumOS">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,360" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
+		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,360" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" />
 		<ePixmap pixmap="buttons/green.png" position="628,1034" size="34,34" zPosition="1" alphaTest="blend" />
 		<ePixmap pixmap="buttons/yellow.png" position="1064,1034" size="34,34" zPosition="1" alphaTest="blend" />
 		<ePixmap pixmap="buttons/blue.png" position="1500,1034" size="34,34" zPosition="1" alphaTest="blend" />
@@ -3304,7 +3304,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
           <!-- WitAiSpeechToText -->
 	<screen name="WitAiSttSetup" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
+		<widget name="config" valueFont="Regular;30" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
 		<widget source="description" render="Label" position="30,550" size="720,400" font="Regular; 30" horizontalAlignment="center" />
 		<ePixmap pixmap="buttons/key_text.png" position="30,1032" size="52,38" alphaTest="on" zPosition="1" />
 	</screen>
@@ -3315,7 +3315,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	</screen>
 	<screen name="AnimationSetupConfig" position="fill" title="Animation Settings">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
+		<widget name="config" valueFont="Regular;30" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="AnimationSetupScreen" position="fill" title="Animation Setup" flags="wfNoBorder">
 		<panel name="PigTemplate" />
