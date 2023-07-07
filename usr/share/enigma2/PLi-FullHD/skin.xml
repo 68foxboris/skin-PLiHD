@@ -1795,7 +1795,7 @@
 		<panel name="HelpMenuNew" conditional="indicatorU0" />
 		<panel name="HelpMenuOld" conditional="arrowdown" />
 	</screen>
-  
+
 	<screen name="HelpMenuOld" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
 		<widget name="list" position="780,100" size="855,900" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
@@ -1807,7 +1807,7 @@
 		<widget name="long_key" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top" />
 		<ePixmap pixmap="buttons/key_help.png" position="1830,1024" size="53,38" alphaTest="on" />
 	</screen>
-  
+
 	<screen name="HelpMenuNew" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
 		<panel name="TemplateRemoteControl" />
@@ -3311,7 +3311,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
   <!-- MiniTV -->
 	<screen name="MiniTVSetup" position="fill" title="MiniTV Setup" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="config" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
+		<widget name="config" valueFont="Regular;30" position="780,100" size="1110,900" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" />
 	</screen>
 	<screen name="AnimationSetupConfig" position="fill" title="Animation Settings">
 		<panel name="PigTemplate" />
