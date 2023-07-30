@@ -3024,12 +3024,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget source="IFtext" render="Label" position="785,940" size="120,40" font="Regular; 30" horizontalAlignment="left" transparent="1" backgroundColor="black" />
 		<widget source="IF" position="910,940" size="400,40" render="Label" font="Regular; 30" verticalAlignment="center" transparent="1" backgroundColor="black" />
 		<widget source="Statustext" position="1507,940" size="300,40" render="Label" font="Regular; 30" horizontalAlignment="right" verticalAlignment="center" transparent="1" backgroundColor="black" />
-		<widget name="statuspic" position="1315,940" size="38,40" transparent="1" alphaTest="blend" pixmaps="icons/lock_on.png,icons/lock_off.png" />
+		<widget name="statuspic" position="1315,941" size="38,36" transparent="1" alphaTest="blend" pixmaps="icons/lock_on.png,icons/lock_off.png" />
 		<ePixmap pixmap="buttons/key_help.png" position="30,1032" size="52,38" alphaTest="on" />
 	</screen>
 	<screen name="Geolocation" position="fill" title="Geolocation" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="AboutScrollLabel" position="865,105" size="1000,900" font="Regular; 30" horizontalAlignment="center" split="1" dividechar=":" colposition="0" transparent="1" backgroundColor="black" />
+		<widget name="AboutScrollLabel" position="865,105" size="1000,900" font="Regular; 30" horizontalAlignment="center" transparent="1" backgroundColor="black" />
 	</screen>
 	<screen name="BenchmarkInformation" position="fill" flags="wfNoBorder">
 		<panel name="Geolocation" />
@@ -3476,5 +3476,47 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="labsize" position="1200,212" size="400,36" font="Regular; 30" backgroundColor="black" transparent="1" />
 		<widget name="inactive" position="1200,258" size="190,36" font="Regular; 30" horizontalAlignment="left" backgroundColor="red" foregroundColor="black" />
 		<widget name="active" position="1200,258" size="190,36" font="Regular; 30" horizontalAlignment="left" backgroundColor="green" foregroundColor="black" />
+	</screen>
+	 <screen name="MSNWeatherPlugin" position="fill" flags="wfNoBorder" title="Weather Plugin">
+		<panel name="TopTemplate" />
+		<widget source="caption" render="Label" position="40,120" zPosition="1" size="900,40" font="Regular; 32" transparent="1" />
+		<widget name="currenticon" position="40,250" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="currentTemp" render="Label" position="250,250" zPosition="1" size="450,100" font="Regular; 36" transparent="1" />
+		<widget source="feelsliketemp" render="Label" position="250,360" zPosition="1" size="450,40" font="Regular; 30" transparent="1" />
+		<widget source="observationtime" render="Label" position="1200,120" zPosition="1" size="650,40" font="Regular; 30" transparent="1" horizontalAlignment="right" />
+		<widget source="observationpoint" render="Label" position="860,180" zPosition="1" size="1000,100" font="Regular; 30" transparent="1" horizontalAlignment="right" />
+		<widget source="condition" render="Label" position="860,300" zPosition="1" size="1000,40" font="Regular; 32" transparent="1" />
+		<widget source="wind_condition" render="Label" position="860,350" zPosition="1" size="1000,40" font="Regular; 32" transparent="1" />
+		<widget source="humidity" render="Label" position="860,400" zPosition="1" size="1000,40" font="Regular; 32" verticalAlignment="bottom" transparent="1" />
+		<widget source="weekday1" render="Label" position="70,540" zPosition="1" size="300,100" horizontalAlignment="center" verticalAlignment="center" font="Regular; 30" transparent="1" />
+		<widget name="weekday1_icon" position="145,680" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="weekday1_temp" render="Label" position="70,850" zPosition="1" size="300,150" horizontalAlignment="center" verticalAlignment="bottom" font="Regular; 30" transparent="1" />
+		<widget source="weekday2" render="Label" position="440,540" zPosition="1" size="300,100" horizontalAlignment="center" verticalAlignment="center" font="Regular; 30" transparent="1" />
+		<widget name="weekday2_icon" position="515,680" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="weekday2_temp" render="Label" position="440,850" zPosition="1" size="300,150" horizontalAlignment="center" verticalAlignment="bottom" font="Regular; 30" transparent="1" />
+		<widget source="weekday3" render="Label" position="810,540" zPosition="1" size="300,100" horizontalAlignment="center" verticalAlignment="center" font="Regular; 30" transparent="1" />
+		<widget name="weekday3_icon" position="885,680" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="weekday3_temp" render="Label" position="810,850" zPosition="1" size="300,150" horizontalAlignment="center" verticalAlignment="bottom" font="Regular; 30" transparent="1" />
+		<widget source="weekday4" render="Label" position="1180,540" zPosition="1" size="300,100" horizontalAlignment="center" verticalAlignment="center" font="Regular; 30" transparent="1" />
+		<widget name="weekday4_icon" position="1255,680" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="weekday4_temp" render="Label" position="1180,850" zPosition="1" size="300,150" horizontalAlignment="center" verticalAlignment="bottom" font="Regular; 30" transparent="1" />
+		<widget source="weekday5" render="Label" position="1550,540" zPosition="1" size="300,100" horizontalAlignment="center" verticalAlignment="center" font="Regular; 30" transparent="1" />
+		<widget name="weekday5_icon" position="1625,680" zPosition="1" size="150,130" alphaTest="blend" />
+		<widget source="weekday5_temp" render="Label" position="1550,850" zPosition="1" size="300,150" horizontalAlignment="center" verticalAlignment="bottom" font="Regular; 30" transparent="1" />
+		<widget source="statustext" render="Label" position="fill" font="Regular;30" zPosition="1" horizontalAlignment="center" verticalAlignment="center" transparent="1" />
+	</screen>
+	<screen name="MSNWeatherPluginSearch" position="fill">
+		<panel name="PigTemplate" />
+		<widget name="entrylist" position="780,105" size="1110,760" itemHeight="38" font="Regular; 30" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="MSNWeatherPluginEntriesListConfigScreen" position="fill">
+		<panel name="PigTemplate" />
+		<widget render="Label" source="city" position="780,105" size="550,50" font="Regular; 32" horizontalAlignment="left" />
+		<widget render="Label" source="degreetype" position="1340,105" size="550,50" font="Regular; 32" horizontalAlignment="left" />
+		<widget name="entrylist" position="780,180" size="1110,760" itemHeight="38" font="Regular; 30" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="MSNWeatherPluginEntryConfigScreen" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget name="config" position="780,105" size="1110,300" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
 	</screen>
 </skin>
