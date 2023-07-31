@@ -3029,7 +3029,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	</screen>
 	<screen name="Geolocation" position="fill" title="Geolocation" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="AboutScrollLabel" position="865,105" size="1000,900" font="Regular; 30" horizontalAlignment="center" transparent="1" backgroundColor="black" />
+		<widget name="AboutScrollLabel" position="865,105" size="1000,900" font="Regular; 30" horizontalAlignment="center" split="1" dividechar=":" colposition="0" transparent="1" backgroundColor="black" />
 	</screen>
 	<screen name="BenchmarkInformation" position="fill" flags="wfNoBorder">
 		<panel name="Geolocation" />
