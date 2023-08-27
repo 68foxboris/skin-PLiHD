@@ -451,39 +451,5 @@
 		<widget name="indicatorL14" pixmap="rc_circle.png" position="0,0" size="23,23" alphaTest="blend" offset="11,11" zPosition="11" />
 		<widget name="indicatorL15" pixmap="rc_circle.png" position="0,0" size="23,23" alphaTest="blend" offset="11,11" zPosition="11" />
 	</screen>
-	  <!-- E-Panel -->
-	<screen name="Templates_EP_LG">
-		<widget source="menu" render="Listbox" position="835,100" size="1000,900" scrollbarMode="showOnDemand" transparent="1">
-		<convert type="TemplatedMultiContent">
-		{
-		"template": [
-			MultiContentEntryText(pos = (100, 12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
-			MultiContentEntryText(pos = (110, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
-			MultiContentEntryPixmapalphaTest(pos = (5, 23), size = (150, 60), png = 2), # index 4 is the pixmap
-				],
-		"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
-		"itemHeight": 90
-		}
-		</convert>
-		</widget>
-	</screen>
-	<screen name="Templates_EP_BG">
-		<widget source="menu" render="Listbox" position="835,100" size="1000,900" scrollbarMode="showOnDemand" transparent="1">
-		<convert type="TemplatedMultiContent">
-		{
-		"template": [
-			MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
-			MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
-			MultiContentEntryPixmapalphaTest(pos = (5, 23), size = (150, 60), png = 3), # index 4 is the pixmap
-				],
-		"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
-		"itemHeight": 90
-		}
-		</convert>
-		</widget>
-	</screen>
-	<screen name="Templates_EP_CON">
-		<widget name="config" position="835,100" size="1000,882" font="Regular; 30" itemHeight="42" scrollbarMode="showOnDemand" transparent="1" />
-	</screen>
 </skin>
 
