@@ -1172,21 +1172,16 @@
 		<widget name="filelist" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<!-- INFO SERVICE SAT -->
-
-	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<widget name="infolist" position="780,100" size="1110,874" itemHeight="38" font="Regular;28" selection="0" scrollbarMode="showOnDemand"/>
-		<widget source="session.CurrentService" render="Label" position="300,975" size="1590,37" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;33" verticalAlignment="top" horizontalAlignment="center">
-				<convert type="ServiceInfo">HasHBBTV</convert>
-		</widget>
-	</screen>
-
-	<!-- INFO SERVICE URL IPTV -->
-
 	<screen name="ServiceInfoSimple" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="infolist" position="780,100" size="1110,874" itemHeight="38" font="Regular;28" selection="0" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="ServiceInfo" position="fill" flags="wfNoBorder">
+		<panel name="ServiceInfoSimple"/>
+		<widget source="session.CurrentService" render="Label" position="300,975" size="1590,37" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;33" verticalAlignment="top" horizontalAlignment="center">
+				<convert type="ServiceInfo">HasHBBTV</convert>
+		</widget>
 	</screen>
 
 	<!-- Softwaremanager -->
