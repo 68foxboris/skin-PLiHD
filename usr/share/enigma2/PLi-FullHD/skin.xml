@@ -1165,7 +1165,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos=(15, 11), size=(150, 60), png=3, flags=BT_SCALE),
+					MultiContentEntryPixmapAlphaTest(pos=(15, 11), size=(150, 60), png=3, flags=BT_SCALE),
 					MultiContentEntryText(pos=(210, 9), size=(900, 34), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP, text=1),
 					MultiContentEntryText(pos=(210, 50), size=(900, 24), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text=2, color=0x4ffffff,color_sel=0x00c8aa40)
 					],
@@ -1174,24 +1174,24 @@
 				}
 			</convert>
 		</widget>
-		<widget source="pluginGrid" render="Listbox" position="780,100" size="1110,912" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showOnDemand">
+		 <widget source="pluginGrid" render="Listbox" position="830,80" size="1000,900" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarBackgroundPicture="slider/scroll.png" scrollbarSliderPicture="slider/slider.png" scrollbarSliderBorderColor="black" transparent="1" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos=(0, 0), size=(218, 110), font=0),
-					MultiContentEntryText(pos=(4, 4), size=(216, 104), font=0, backcolor=0x002d2d2e),
-					MultiContentEntryPixmapAlphaBlend(pos=(58, 14), size=(100, 40), png=3, flags=BT_SCALE),
-					MultiContentEntryText(pos=(5, 58), size=(199, 45), font=0, flags=RT_VALIGN_CENTER | RT_HALIGN_CENTER | RT_WRAP, text=1)
+					MultiContentEntryText(pos=(0, 0), size=(248, 140), font=0),
+					MultiContentEntryText(pos=(6, 6), size=(246, 138), font=0, backcolor=0x001f1f20),
+					MultiContentEntryPixmapAlphaTest(pos=(50, 20), size=(150, 60), png=3, flags=BT_SCALE),
+					MultiContentEntryText(pos=(3, 85), size=(240, 50), font=0, flags=RT_VALIGN_CENTER | RT_HALIGN_CENTER | RT_WRAP, text=1)
 					],
-				"fonts": [parseFont("Regular;19")],
-				"itemWidth": 220,
-				"itemHeight": 112
+				"fonts": [parseFont("Regular;20")],
+				"itemWidth": 250,
+				"itemHeight": 142
 				}
 			</convert>
 		</widget>
-		<widget name="quickselect" position="780,100" size="1110,912" font="Regular;24" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
-		<widget source="description" render="Label" conditional="description" position="780,100" size="1110,912" font="Regular;25" horizontalAlignment="left" transparent="1" zPosition="2" />
+		<widget name="quickselect" valueFont="Regular;25" position="780,100" size="1110,912" font="Regular;24" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
+		<widget source="description" valueFont="Regular;26" render="Label" conditional="description" position="780,100" size="1110,912" font="Regular;25" horizontalAlignment="left" transparent="1" zPosition="2" />
 		<!--<eLabel text="Plugin Browser Setup" position="780,100" size="1110,912" font="RegularBold;26" horizontalAlignment="center" verticalAlignment="center" transparent="1" zPosition="3" />-->
 	</screen>
 
