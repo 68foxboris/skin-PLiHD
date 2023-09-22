@@ -1159,8 +1159,7 @@
 		<ePixmap pixmap="buttons/key_prev.png" alphaTest="blend" position="30,1032" size="52,38" />
 		<ePixmap pixmap="buttons/key_next.png" alphaTest="blend" position="82,1032" size="52,38" />
 		<ePixmap pixmap="buttons/key_menu.png" alphaTest="blend" position="134,1032" size="52,38" />
-		<widget name="list" position="780,100" size="1110,912" scrollbarMode="showOnDemand" />
-		<widget source="pluginList" render="Listbox" position="780,100" size="1110,912" conditional="pluginList" listOrientation="vertical" scrollbarMode="showOnDemand">
+		<widget source="pluginList" render="Listbox" position="780,100" size="1110,912" conditional="pluginList" listOrientation="vertical" scrollbarMode="showOnDemand" scrollbarForegroundColor="#00578cc0" scrollbarBorderColor="#00578cc0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1174,7 +1173,7 @@
 				}
 			</convert>
 		</widget>
-		 <widget source="pluginGrid" render="Listbox" position="830,80" size="1000,900" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarBackgroundPicture="slider/scroll.png" scrollbarSliderPicture="slider/slider.png" scrollbarSliderBorderColor="black" transparent="1" enableWrapAround="1">
+		 <widget source="pluginGrid" render="Listbox" position="830,80" size="1000,900" conditional="pluginGrid" listOrientation="grid" scrollbarMode="showOnDemand" scrollbarForegroundColor="#00578cc0" scrollbarBorderColor="#00578cc0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1190,8 +1189,8 @@
 				}
 			</convert>
 		</widget>
-		<widget name="quickselect" valueFont="Regular;25" position="780,100" size="1110,912" font="Regular;24" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
-		<widget source="description" valueFont="Regular;26" render="Label" conditional="description" position="780,100" size="1110,912" font="Regular;25" horizontalAlignment="left" transparent="1" zPosition="2" />
+		<widget name="quickselect" position="780,100" size="1110,912" font="Regular;24" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
+		<widget source="description" render="Label" conditional="description" position="780,100" size="1110,912" font="Regular;25" horizontalAlignment="left" transparent="1" zPosition="2"/>
 		<!--<eLabel text="Plugin Browser Setup" position="780,100" size="1110,912" font="RegularBold;26" horizontalAlignment="center" verticalAlignment="center" transparent="1" zPosition="3" />-->
 	</screen>
 
