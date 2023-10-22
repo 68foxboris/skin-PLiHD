@@ -1253,7 +1253,7 @@
 
 	<screen name="ShoutcastTemplate">
 		<panel name="PigLessTemplate"/>
-		<widget name="cover" position="60,150" size="592,562" zPosition="2" horizontalAlignment="left" verticalAlignment="center" alphaTest="blend"/>
+		<widget name="cover" position="60,140" size="592,562" zPosition="2"/>
 	</screen>
 
 	<screen name="SHOUTcastWidget" title="SHOUTcast" position="fill" flags="wfNoBorder">
