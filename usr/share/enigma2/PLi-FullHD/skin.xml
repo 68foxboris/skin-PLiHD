@@ -1170,7 +1170,7 @@
 					MultiContentEntryText(pos=(210, 50), size=(900, 24), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text=2, color=0x4ffffff,color_sel=0x00c8aa40)
 					],
 				"fonts": [parseFont("Regular;32"), parseFont("Regular;22")],
-				"itemHeight": 83
+				"itemHeight": 91
 				}
 			</convert>
 		</widget>
