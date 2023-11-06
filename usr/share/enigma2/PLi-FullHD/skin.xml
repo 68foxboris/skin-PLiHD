@@ -3032,9 +3032,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder" title="">
 		<panel name="LogManagerViewLog" />
 	</screen>
-  <!-- HistoryZapSelector -->
-	<screen name="HistoryZapSelector" position="30,105" size="1100,900" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="0,0" size="1100,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
+	<!-- HistoryZapSelector -->
+	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1100,900" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarSliderPicture="slider/slider.png" scrollbarSliderBorderColor="black" scrollbarBackgroundPicture="slider/scroll.png" itemHeight="100" transparent="1">
 		<convert type="TemplatedMultiContent">
 		{"template": [
 				MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
@@ -3043,11 +3044,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 				MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
 				MultiContentEntryPixmapAlphaBlend(pos=(10, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
 			],
-		 "fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
-		 "itemHeight": 100
+		"fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
+		"itemHeight": 100
 		}
 		</convert>
-	</widget>
+		</widget>
+		<ePixmap pixmap="menu/zaphistory.png" position="1455,740" size="192,192" scale="on" alphaTest="on" />
 	</screen>
 		<!-- Menu -->
 	<screen name="Animmain" position="0,750" size="1920,330" title="Mainmenu" flags="wfNoBorder">
