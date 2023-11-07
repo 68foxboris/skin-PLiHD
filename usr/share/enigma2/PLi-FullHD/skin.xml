@@ -3032,25 +3032,47 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<screen name="LogManagerFb" position="fill" flags="wfNoBorder" title="">
 		<panel name="LogManagerViewLog" />
 	</screen>
+
 	<!-- HistoryZapSelector -->
-	<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate" />
-		<widget source="menu" render="Listbox" position="780,100" size="1100,900" scrollbarMode="showOnDemand" scrollbarWidth="7" scrollbarSliderPicture="slider/slider.png" scrollbarSliderBorderColor="black" scrollbarBackgroundPicture="slider/scroll.png" itemHeight="100" transparent="1">
-		<convert type="TemplatedMultiContent">
-		{"template": [
-				MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
-				MultiContentEntryText(pos = (190, 1), size = (610, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
-				MultiContentEntryText(pos = (190, 36), size = (610, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
-				MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
-				MultiContentEntryPixmapAlphaBlend(pos=(10, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
-			],
-		"fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
-		"itemHeight": 100
-		}
-		</convert>
-		</widget>
-		<ePixmap pixmap="menu/zaphistory.png" position="1455,740" size="192,192" scale="on" alphaTest="on" />
-	</screen>
+		<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder">
+			<panel name="PigTemplate" />	
+			<widget source="menu" render="Listbox" position="780,100" size="1100,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
+			<convert type="TemplatedMultiContent">
+			{"template": [
+					MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
+					MultiContentEntryText(pos = (190, 1), size = (610, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
+					MultiContentEntryText(pos = (190, 36), size = (610, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
+					MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
+					MultiContentEntryPixmapAlphaBlend(pos=(10, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
+				],
+			"fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
+			"itemHeight": 100
+			}
+			</convert>
+			</widget>
+		</screen>
+		<screen name="vZapHistory" position="fill" flags="wfNoBorder">
+			<panel name="PigTemplate" />
+			<widget name="list" position="780,100" size="1110,900" itemHeight="90" scrollbarMode="showOnDemand" transparent="1" />
+		</screen>
+		<screen name="vZapHistoryConf" position="fill" flags="wfNoBorder">
+			<panel name="PigTemplate" />
+			<widget name="config" position="780,100" size="1110,900" font="Regular; 30" valueFont="Regular; 24" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		</screen>
+
+		<!-- smfl  -->
+		<screen name="smfl" position="fill" title="smfl" flags="wfNoBorder">
+			<panel name="PigTemplate" />
+			<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" itemHeight="45">
+				<convert type="TemplatedMultiContent">
+						{"template": [ MultiContentEntryText(pos = (5, 5), size = (900, 40), flags = RT_HALIGN_LEFT, text = 0) ],
+						"fonts": [gFont("Regular", 30)],
+						"itemHeight": 50
+						}
+				</convert>
+			</widget>
+		</screen>
+
 		<!-- Menu -->
 	<screen name="Animmain" position="0,750" size="1920,330" title="Mainmenu" flags="wfNoBorder">
 		<widget name="title" position="405,18" size="1110,44" font="Regular; 40" horizontalAlignment="center" transparent="1" backgroundColor="black" />
@@ -3202,5 +3224,155 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<screen name="MSNWeatherPluginEntryConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
 		<widget name="config" position="780,105" size="1110,300" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<!-- E Tools --> 
+	<screen name="etoolsmainmenu" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 3), # index 4 is the pixmap
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+		<ePixmap pixmap="buttons/key_info.png" alphatest="blend" position="82,1032" size="52,38" />
+	</screen>
+	<screen name="Aboutsystem" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget name="text" position="800,100" size="1100,930" font="Regular; 30" halign="center" split="1" dividechar=":" colposition="0" noWrap="1" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+	<screen name="etoolsConfigExtentions2" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget name="config" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+		<widget name="description" position="30,571" size="720,385" font="Regular;30" valign="top" />
+	</screen>
+	<screen name="einstaller" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+		<ePixmap pixmap="buttons/key_info.png" alphatest="blend" position="82,1032" size="52,38" />
+	</screen>
+	<screen name="emuSelelection" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+		<widget source="inmemory" render="Label" position="30,532" size="720,34" font="Regular; 30" halign="center" noWrap="1" transparent="1" />
+		<widget name="text" position="30,570" size="720,400" font="Regular; 30" transparent="1" halign="center" foregroundColor="yellow" backgroundColor="black" />
+	</screen>
+	<screen name="satusmessage" position="435,235" size="1050,50" title="Please wait">
+		<widget source="status" render="Label" position="10,8" size="1030,32" font="Regular; 30" halign="center" transparent="1" />
+	</screen>
+	<screen name="ESwapScreen" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 3), # index 4 is the pixmap	
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+	</screen>
+	<screen name="ESwapScreen2" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap	
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+	</screen>
+	<screen name="EScriptScreen2" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap	
+					],
+			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
+			"itemHeight": 90
+			}
+		</convert>
+		</widget>
+	</screen>
+	<screen name="eCrashLogScreen" position="fill" title="" flags="wfNoBorder">
+		<panel name="einstaller" />
+	</screen>
+	<screen name="fullLogScreen" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget name="text" position="780,100" size="1110,900" font="Regular; 30" itemHeight="45" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+	<screen name="CrontabMan" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="50">
+		<convert type="TemplatedMultiContent">
+			{"template": [
+				MultiContentEntryText(pos = (15, 7), size = (1000, 36), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
+					],
+			"fonts": [gFont("Regular", 30),gFont("Regular", 24)],
+			"itemHeight": 50
+			}
+		</convert>
+		</widget>
+	</screen>
+	<screen name="CrontabManAdd" position="fill" title="" flags="wfNoBorder">
+		<panel name="PigTemplate" />
+		<widget name="config" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="InstallFeed" position="fill" title="" flags="wfNoBorder">
+		<panel name="einstaller" />
+	</screen>
+	<screen name="eRemoveIPK" position="fill" title="" flags="wfNoBorder">
+		<panel name="einstaller" />
+	</screen>
+	<screen name="eDownloadFeed" position="fill" title="" flags="wfNoBorder">
+		<panel name="einstaller" />
+	</screen>
+	<screen name="eKernel" position="fill" title="" flags="wfNoBorder">
+		<panel name="EScriptScreen2" />
+	</screen>
+	<screen name="lsmodScreen" position="fill" title="" flags="wfNoBorder">
+		<panel name="EScriptScreen2" />
+	</screen>
+	<screen name="eupgrade" position="fill" title="" flags="wfNoBorder">
+		<panel name="ESwapScreen2" />
 	</screen>
 </skin>
