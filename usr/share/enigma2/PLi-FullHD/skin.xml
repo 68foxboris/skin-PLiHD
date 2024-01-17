@@ -3068,18 +3068,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<!-- HistoryZapSelector -->
 		<screen name="HistoryZapSelector" position="fill" flags="wfNoBorder">
-			<panel name="PigTemplate" />	
-			<widget source="menu" render="Listbox" position="780,100" size="1100,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
-			<convert type="TemplatedMultiContent">
-			{"template": [
-					MultiContentEntryText(pos = (150, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
-					MultiContentEntryText(pos = (190, 1), size = (610, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
-					MultiContentEntryText(pos = (190, 36), size = (610, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
-					MultiContentEntryText(pos = (800, 35), size = (300, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
-					MultiContentEntryPixmapAlphaBlend(pos=(10, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
-				],
-			"fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
-			"itemHeight": 100
+			<panel name="PigTemplate" />
+		<widget source="menu" render="Listbox" position="765,100" size="1130,900" scrollbarMode="showOnDemand" backgroundColor="background" foregroundColorSelected="yellow" transparent="1">
+		<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (140, 30), size = (30, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1), # Current Service
+					MultiContentEntryText(pos = (170, 1), size = (610, 34), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 2), # Servicename
+					MultiContentEntryText(pos = (170, 36), size = (610, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Eventname
+					MultiContentEntryText(pos = (760, 35), size = (370, 30), font = 3, flags = RT_HALIGN_CENTER, text = 5), # Eventtime
+					MultiContentEntryPixmapAlphaBlend(pos=(5, 15), size=(120, 70), png=6, flags = BT_SCALE) # picon
+					],
+					"fonts": [gFont("Regular",32), gFont("Regular",32), gFont("Regular",26), gFont("Regular",26)],
+					"itemHeight": 100
 			}
 			</convert>
 			</widget>
@@ -3259,7 +3259,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="config" position="780,105" size="1110,300" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" />
 	</screen>
 
-	<!-- E Tools --> 
+	<!-- E Tools -->
 	<screen name="etoolsmainmenu" position="fill" title="" flags="wfNoBorder">
 		<panel name="PigTemplate" />
 		<widget source="menu" render="Listbox" position="780,100" size="1110,900" scrollbarMode="showOnDemand" transparent="1" itemHeight="90">
@@ -3328,7 +3328,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 			{"template": [
 				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
-				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 3), # index 4 is the pixmap	
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 3), # index 4 is the pixmap
 					],
 			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
 			"itemHeight": 90
@@ -3343,7 +3343,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 			{"template": [
 				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 3 is the Description
-				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap	
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap
 					],
 			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
 			"itemHeight": 90
@@ -3358,7 +3358,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 			{"template": [
 				MultiContentEntryText(pos = (150,12), size = (900, 38), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 2 is the Menu Titel
 				MultiContentEntryText(pos = (150, 49), size = (900, 27), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 3 is the Description
-				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap	
+				MultiContentEntryPixmapAlphaTest(pos = (25, 15), size = (75, 60), png = 2), # index 4 is the pixmap
 					],
 			"fonts": [gFont("Regular", 32),gFont("Regular", 23)],
 			"itemHeight": 90
