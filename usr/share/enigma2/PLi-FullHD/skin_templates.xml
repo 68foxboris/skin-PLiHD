@@ -331,7 +331,7 @@
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1440,978" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" horizontalAlignment="right">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText"></convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="270,1023" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="left">
 			<convert type="EventTime">StartTime</convert>
@@ -342,7 +342,7 @@
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1440,1023" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="right">
 			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">InMinutes</convert>
+			<convert type="ClockToText"></convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="270,952" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
 			<convert type="EventTime">Progress</convert>
