@@ -2872,7 +2872,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	  <!-- Information -->
 	<screen name="Information" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate" />
-		<widget name="information" conditional="information" position="780,105" size="1110,900" font="Regular; 30" foregroundColor="foreground" enableWrapAround="1" leftColAlign="left" rightColAlign="left" colPosition="595" divideChar="|" noWrap="1" split="1" transparent="1" backgroundColor="black" />
+		<widget name="information" conditional="information" position="780,105" size="1110,900" font="Regular; 30" foregroundColor="foreground" leftColAlign="left" rightColAlign="left" colPosition="595" divideChar="|" noWrap="1" split="1" transparent="1" backgroundColor="black" />
 		<widget source="lab1" render="Label" position="0,0" size="0,0" conditional="lab1" font="Regular;30" transparent="1" />
 		<widget source="lab2" render="Label" position="0,0" size="0,0" conditional="lab2" font="Regular;28" transparent="1" />
 		<widget source="lab3" render="Label" position="0,0" size="0,0" conditional="lab3" font="Regular;28" transparent="1" />
