@@ -889,7 +889,7 @@
 		<widget name="label8" position="780,357" size="1110,36" font="Regular;30" verticalAlignment="center"/>
 	</screen>
 
-	<screen name="CSFDVirtualKeyBoard" position="fill" title="Virtuální klávesnice pro CSFD" flags="wfNoBorder">
+	<screen name="CSFDVirtualKeyboard" position="fill" title="Virtuální klávesnice pro CSFD" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="ButtonYellow"/>
 		<widget name="header" position="780,105" size="1110,45" font="Regular;36" transparent="1" noWrap="1" horizontalAlignment="left"/>

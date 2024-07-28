@@ -37,7 +37,7 @@
 		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
 		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
 		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="VirtualKeyBoard" font="DejaVuSans" size="42" height="68"/>
+		<alias name="VirtualKeyboard" font="DejaVuSans" size="42" height="68"/>
 		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
 		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
@@ -110,8 +110,8 @@
 		<parameter name="ChoicelistNameSingle" value="5,0,1275,38"/>
 		<parameter name="ExpandableListIcon" value="0,0,55,38"/>
 		<parameter name="ExpandableListDescr" value="55,2,1000,45"/>
-		<parameter name="VirtualKeyBoard" value="68,68"/>
-		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
+		<parameter name="VirtualKeyboard" value="68,68"/>
+		<parameter name="VirtualKeyboardShiftColors" value="0x00ffffff,0x00ffffff,0x0000ffff,0x00ff00ff"/>
 		<parameter name="AutotimerListIcon" value="4,5,24,25"/>
 		<parameter name="AutotimerListRectypeicon" value="34,8,24,25"/>
 		<parameter name="AutotimerListIcons" value="*icons/small/lock_on.png,*icons/small/lock_off.png,*icons/small/timer_rec.png,*icons/small/timer_zap.png"/>
@@ -2406,9 +2406,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="info" position="780,100" size="1110,38" font="Regular;28" horizontalAlignment="center" transparent="1" zPosition="2"/>
 	</screen>
 
-	<!-- Virtual Keyboard -->
+	<!-- VirtualKeyboard -->
 
-	<screen name="VirtualKeyBoard" title="Virtual keyboard" position="fill" zPosition="99">
+	<screen name="VirtualKeyboard" title="Virtual keyboard" position="fill" zPosition="99">
 		<panel name="PigTemplate"/>
 		<ePixmap pixmap="buttons/key_text.png" alphaTest="blend" position="30,1032" size="52,38"/>
 		<ePixmap pixmap="buttons/key_info.png" alphaTest="blend" position="82,1032" size="52,38"/>
