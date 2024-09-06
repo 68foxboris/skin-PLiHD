@@ -2215,7 +2215,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="SkinSelection" position="fill" title="Choose your Skin" flags="wfNoBorder">
 		<panel name="Setup" />
-		<panel name="Buttons_flist_np" />
 		<widget name="preview" position="165,680" size="380,250" conditional="preview" backgroundColor="background" alphatest="blend" scale="on" transparent="1" zPosition="13" />
 	</screen>
 	<!-- Skin Selector -->
