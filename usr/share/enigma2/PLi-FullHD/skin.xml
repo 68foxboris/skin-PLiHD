@@ -37,7 +37,7 @@
 		<alias name="PartnerBoxChannelList1" font="Regular" size="28"/>
 		<alias name="PartnerBoxChannelEPGList0" font="Regular" size="32" height="38"/>
 		<alias name="PartnerBoxChannelEPGList1" font="Regular" size="24"/>
-		<alias name="VirtualKeyboard" font="DejaVuSans" size="42" height="68"/>
+		<alias name="VirtualKeyBoard" font="DejaVuSans" size="42" height="68"/>
 		<alias name="HelpMenuList" font="Regular" size="30" height="45"/>
 		<alias name="HelpMenuListExt0" font="Regular" size="32" height="75"/>
 		<alias name="HelpMenuListExt1" font="Regular" size="28"/>
@@ -99,10 +99,18 @@
 	</colors>
 
 	<parameters>
-		<!-- Allow User Dates And Times -->
-		<parameter name="AllowUserDatesAndTimes" value="1,1"/>
-		<!-- Allow User Dates And Times Display -->
-		<parameter name="AllowUserDatesAndTimesDisplay" value="1,1"/>
+    		<!-- Allow User Dates And Times -->
+    		<parameter name="AllowUserDatesAndTimes" value="1,1"/>
+    		<!-- Allow User Dates And Times Display -->
+    		<parameter name="AllowUserDatesAndTimesDisplay" value="1,1"/>
+    		<!-- PluginList -->
+    		<parameter name="PluginBrowserIcon" value="10,17,100,40" />
+    		<parameter name="PluginBrowserName" value="125,5,40" />
+    		<parameter name="PluginBrowserDescr" value="125,42,30" />
+    		<parameter name="PluginBrowserDownloadIcon" value="10,0,80,60" />
+    		<parameter name="PluginBrowserDownloadName" value="90,0,40" />
+    		<parameter name="PluginBrowserDownloadDescr" value="90,40,30" />
+		<!-- PluginList -->
 		<parameter name="ConfigListSeperator" value="350"/>
 		<parameter name="ConfigListSlider" value="22,0"/>
 		<parameter name="ChoicelistName" value="68,2,1000,35"/>
@@ -2462,7 +2470,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<!-- VirtualKeyboard -->
 
-	<screen name="VirtualKeyboard" title="Virtual keyboard" position="fill" zPosition="99">
+	<screen name="VirtualKeyBoard" title="Virtual keyboard" position="fill" zPosition="99">
 		<panel name="PigTemplate"/>
 		<ePixmap pixmap="buttons/key_text.png" alphaTest="blend" position="30,1032" size="52,38"/>
 		<ePixmap pixmap="buttons/key_info.png" alphaTest="blend" position="82,1032" size="52,38"/>
