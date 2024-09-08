@@ -248,12 +248,12 @@
 		<eLabel position="fill" backgroundColor="transpBlack" zPosition="0"/>
 		<widget source="session.CurrentService" render="Label" position="30,30" size="1440,135" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;30" verticalAlignment="top" horizontalAlignment="left">
 			<convert type="PliExtraInfo">All</convert>
-		</widget>  
+		</widget>
 		<eLabel name="snr" position="1080,49" size="80,25" backgroundColor="transpBlack" horizontalAlignment="center" transparent="1" text=" SNR" font="Regular;21" />
 		<widget source="session.FrontendStatus" render="Progress" pixmap="PLi-FullHD/icons/bar_snr.png" backgroundColor="transpBlack" zPosition="1" position="1160,45" size="615,30" borderWidth="2" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1784,49" size="80,28" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" horizontalAlignment="left" font="Regular;21"> 
+		<widget source="session.FrontendStatus" render="Label" position="1784,49" size="80,28" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" horizontalAlignment="left" font="Regular;21">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="agc" position="1080,94" size="80,25" backgroundColor="transpBlack" horizontalAlignment="center" transparent="1" text=" AGC" font="Regular;21" />
@@ -414,8 +414,8 @@
 	<!-- Channel, horizontal (Full Screen) -->
 	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
-		<panel name="KeyMenuInfoTemplate"/>		
-		<widget name="list" position="5,100" size="1920,935" transparent="1"
+		<panel name="KeyMenuInfoTemplate"/>
+		<widget name="list" position="5,100" size="1920,935" transparent="1" itemCornerRadius="20"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
 			backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
@@ -1246,7 +1246,7 @@
 	</screen>
 
 	<screen name="PackageAction" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget source="plugins" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1269,12 +1269,12 @@
 	</screen>
 
 	<screen name="PackageActionLog" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget name="log" position="780,100" size="1110,912" font="Regular;28" />
 	</screen>
 
 	<screen name="SoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget name="feedmessage" position="780,100" size="1110,70" font="Regular;28" transparent="1" verticalAlignment="center"/>
 		<widget name="activity" position="780,60" size="1110,10"/>
 		<widget source="list" render="Listbox" position="780,175" size="1110,680" scrollbarMode="showOnDemand">
@@ -2134,7 +2134,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleSelection" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>		
+		<panel name="ButtonTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>
@@ -2163,7 +2163,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleWizard" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>		
+		<panel name="ButtonTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>

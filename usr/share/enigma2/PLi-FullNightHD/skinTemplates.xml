@@ -15,7 +15,7 @@
 				<pixmap index="MarkerImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<pixmap index="FolderImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<text index="EntryName" position="left" size="e-45,38" font="0" verticalAlignment="center" />
-				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" /> 
+				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" />
 			</panel>
 		</mode>
 		<mode name="bouquets" itemHeight="38" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" foregroundColor="white" foregroundColorMaked="Blue" backgroundColorMarked="Black" foregroundColorMakedAndSelected="Green" backgroundColorMarkedAndSelected="Black" recordColor="Red" streamColor="Orange" pseudoColor="Yellow">
@@ -28,7 +28,7 @@
 				<pixmap index="MarkerImage" position="left" size="60,35" alpha="blend" scale="centerScaled"/>
 				<pixmap index="FolderImage" position="left" size="60,35" alpha="blend" scale="centerScaled"/>
 				<text index="ServiceName" position="left" size="225,38" autoFit="Title1" font="1" verticalAlignment="center" wrap="noWrap" />
-				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="1" verticalAlignment="center" wrap="noWrap" /> 
+				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="1" verticalAlignment="center" wrap="noWrap" />
 				<text index="Title1" position="left" size="375,38" font="1" autoGrow="1" verticalAlignment="center" wrap="noWrap" />
 				<progress index="Progress" position="right,9" size="75,11" borderWidth="1" foregroundGradient="green,yellow,red,vertical" />
 			</panel>
@@ -51,7 +51,7 @@
 				<pixmap index="MarkerImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<pixmap index="FolderImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<text index="EntryName" position="left" size="e-45,38" font="0" verticalAlignment="center" />
-				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" /> 
+				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" />
 			</panel>
 		</mode>
 		<mode name="bouquets" itemHeight="75" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" foregroundColor="white" foregroundColorMaked="Blue" backgroundColorMarked="Black" foregroundColorMakedAndSelected="Green" backgroundColorMarkedAndSelected="Black" recordColor="Red" streamColor="Orange" pseudoColor="Yellow">
@@ -83,7 +83,7 @@
 				<pixmap index="MarkerImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<pixmap index="FolderImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<text index="EntryName" position="left" size="e-45,38" font="0" verticalAlignment="center" />
-				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" /> 
+				<text index="MarkerName" position="left" size="e-45,38" foregroundColor="green" font="0" verticalAlignment="center" />
 			</panel>
 		</mode>
 		<mode name="bouquets" itemWidth="240" itemHeight="300" orientation="grid" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" foregroundColor="white" foregroundColorMaked="Blue" backgroundColorMarked="Black" foregroundColorMakedAndSelected="Green" backgroundColorMarkedAndSelected="Black" recordColor="Red" streamColor="Orange" pseudoColor="Yellow">
@@ -97,7 +97,7 @@
 				<pixmap index="FolderImage" position="left" size="60,35" alpha="blend" scale="centerScaled"/>
 			</panel>
 			<text index="ServiceName" position="8,45" size="210,38" font="1" verticalAlignment="center" wrap="noWrap" />
-			<text index="MarkerName" position="8,45" size="210,38" foregroundColor="green" font="1" verticalAlignment="center" wrap="noWrap" /> 
+			<text index="MarkerName" position="8,45" size="210,38" foregroundColor="green" font="1" verticalAlignment="center" wrap="noWrap" />
 			<panel position="8,90" size="210,188" layout="vertical" spacing="0">
 				<text index="Title1" position="top" size="210,30" font="3" wrap="noWrap" />
 				<text index="Title2" position="top" size="210,30" font="3" wrap="noWrap" />

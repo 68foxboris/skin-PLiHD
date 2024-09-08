@@ -446,7 +446,7 @@
 	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="list" position="5,100" size="1920,935" transparent="1"
+		<widget name="list" position="5,100" size="1920,935" transparent="1" itemCornerRadius="20"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
 			backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
@@ -1296,7 +1296,7 @@
 	</screen>
 
 	<screen name="PackageAction" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget source="plugins" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1319,12 +1319,12 @@
 	</screen>
 
 	<screen name="PackageActionLog" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget name="log" position="780,100" size="1110,912" font="Regular;28" />
 	</screen>
 
 	<screen name="SoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>	
+		<panel name="PigTemplate"/>
 		<widget name="feedmessage" position="780,100" size="1110,70" font="Regular;28" transparent="1" verticalAlignment="center"/>
 		<widget name="activity" position="780,60" size="1110,10"/>
 		<widget source="list" render="Listbox" position="780,175" size="1110,680" scrollbarMode="showOnDemand">
@@ -2168,7 +2168,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleSelection" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>		
+		<panel name="ButtonTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>
@@ -2197,7 +2197,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleWizard" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>		
+		<panel name="ButtonTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>
