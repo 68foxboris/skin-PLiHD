@@ -1620,10 +1620,10 @@
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Service" render="Label" position="30,577" size="720,32" transparent="1" foregroundColor="secondFG" font="Regular;28" horizontalAlignment="left">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Service" render="Label" position="30,624" size="720,224" transparent="1" font="Regular;28" horizontalAlignment="block">
-			<convert type="EventName">FullDescription</convert>
+			<convert type="EventInfo">FullDescription</convert>
 		</widget>
 		<widget source="Service" render="NextEpgInfo" position="30,863" size="720,90" transparent="1" font="Regular;26" noWrap="1" NumberOfItems="3" noLabel="1" foregroundColor="secondFG" timeColor="grey" numOfSpaces="2"/>
 	</screen>
