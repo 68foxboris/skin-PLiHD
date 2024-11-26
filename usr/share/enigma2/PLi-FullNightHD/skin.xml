@@ -248,12 +248,12 @@
 		<eLabel position="fill" backgroundColor="transpBlack" zPosition="0"/>
 		<widget source="session.CurrentService" render="Label" position="30,30" size="1440,135" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;30" verticalAlignment="top" horizontalAlignment="left">
 			<convert type="PliExtraInfo">All</convert>
-		</widget>
+		</widget>  
 		<eLabel name="snr" position="1080,49" size="80,25" backgroundColor="transpBlack" horizontalAlignment="center" transparent="1" text=" SNR" font="Regular;21" />
 		<widget source="session.FrontendStatus" render="Progress" pixmap="PLi-FullHD/icons/bar_snr.png" backgroundColor="transpBlack" zPosition="1" position="1160,45" size="615,30" borderWidth="2" borderColor="grey">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="1784,49" size="80,28" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" horizontalAlignment="left" font="Regular;21">
+		<widget source="session.FrontendStatus" render="Label" position="1784,49" size="80,28" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" horizontalAlignment="left" font="Regular;21"> 
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="agc" position="1080,94" size="80,25" backgroundColor="transpBlack" horizontalAlignment="center" transparent="1" text=" AGC" font="Regular;21" />
@@ -381,13 +381,14 @@
 	<screen name="ChannelSelectionDefault" label="Default" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SelectionTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="list" position="780,108" size="1110,900" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
+		<widget name="list" position="780,105" size="1110,1000" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
 			scrollbarMode="showOnDemand" serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45"
 			picServiceEventProgressbar="window/progress.png" progressbarHeight="15" progressBarWidth="60" backgroundColorSelected="#1A27408B"
                         progressPercentWidth="80" colorEventProgressbarBorder="un33333a" fieldMargins="15" nonplayableMargins="15"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft" progressbarBorderWidth="0"
 			foregroundColorServiceNotAvail="#656565" backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
-			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"/>
+			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"
+			itemCornerRadius="20" itemSpacing="2,2" />
 		<widget source="ServiceEvent" render="Label" position="30,528" size="720,30" foregroundColor="transponderinfo" font="Regular;26" verticalAlignment="center" horizontalAlignment="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
 		</widget>
@@ -415,12 +416,12 @@
 	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="list" position="5,100" size="1920,935" transparent="1" itemCornerRadius="20"
+		<widget name="list" position="95,95" size="1920,1200" transparent="1" itemCornerRadius="20" itemSpacing="15,10"
+			itemGradient="#2d101214,#2d101214,horizontal" itemGradientSelected="#1A27408B,#1A27408B,horizontal"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
 			backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
-			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"
-			backgroundColorSelected="#1A27408B"/>
+			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"/>
 	</screen>
 
 	<!-- Simple channelselection -->
@@ -1246,7 +1247,7 @@
 	</screen>
 
 	<screen name="PackageAction" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigTemplate"/>	
 		<widget source="plugins" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1269,12 +1270,12 @@
 	</screen>
 
 	<screen name="PackageActionLog" title="Downloadable plugins" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigTemplate"/>	
 		<widget name="log" position="780,100" size="1110,912" font="Regular;28" />
 	</screen>
 
 	<screen name="SoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
+		<panel name="PigTemplate"/>	
 		<widget name="feedmessage" position="780,100" size="1110,70" font="Regular;28" transparent="1" verticalAlignment="center"/>
 		<widget name="activity" position="780,60" size="1110,10"/>
 		<widget source="list" render="Listbox" position="780,175" size="1110,680" scrollbarMode="showOnDemand">
@@ -2134,7 +2135,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleSelection" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>
+		<panel name="ButtonTemplate"/>		
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>
@@ -2163,7 +2164,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<screen name="LocaleWizard" title="Locale selection" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="ButtonTemplate"/>
+		<panel name="ButtonTemplate"/>		
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
 		<panel name="KeyHelpRTemplate"/>
