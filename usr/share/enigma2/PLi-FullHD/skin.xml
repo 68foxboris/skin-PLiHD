@@ -1975,59 +1975,63 @@
 	</screen>
 
 	<!-- Help -->
-	<screen name="HelpMenu" position="fill" flags="wfNoBorder">
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="PigTemplate" />
-		<panel name="TemplateRemoteControl" />
-		<widget name="rc" position="1660,100" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="blend" />
-		<widget source="list" render="Listbox" position="780,100" size="855,900" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
-		<convert type="TemplatedMultiContent">
-				{
-				# Template for use when "description" is used
-				#
-				# For integrated extended help uncomment the "MultiContentEntryText" entries,
-				# set the itemHeight for the extended entries to 50 and remove the panel for
-				# "ScreenTemplateDescription4".
-				"templates":
+		<widget name="list" conditional="arrowdown"  position="780,100" size="855,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/><!-- belongs to old HelpMenu -->
+		<widget name="long_key" conditional="long_key" position="1590,922" size="375,30" foregroundColor="yellow" font="Regular;24" halign="center"/><!-- belongs to old HelpMenu -->
+		<widget name="longshift_key0" conditional="longshift_key1" position="30,550" size="720,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
+		<widget name="longshift_key1" conditional="longshift_key1" position="30,580" size="720,30" foregroundColor="yellow" font="Regular;24" halign="center"/>
+		<panel position="1659,105" size="231,750">
+			<panel name="RcPanel"/>
+		</panel>
+		<widget source="list" conditional="indicatorU0" render="Listbox" position="780,100" size="855,900" transparent="0" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
 					{
-					# Simple help with no headings ("flat")
-					# data[1:] = [helpText]
-					"default": (50,  # itemHeight
+					"templates": {
+						# Simple help with no headings ("flat")
+						# data[1:] = [helpText]
+						"default": [
+						50,  # itemHeight
 						[
-						MultiContentEntryText(pos = (30, 0), size = (1130, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-						]),
-					# Simple help with headings
-					# data[1:] = [heading, None]  # For heading entries
-					# data[1:] = [None, helpText]  # For help entries
-					"default+headings": (50,  # itemHeight
+						MultiContentEntryText(pos=(0, 6), size=(1100, 57), font=1, text=1),
+						]
+						],
+						# Simple help with headings
+						# data[1:] = [heading, None]  # For heading entries
+						# data[1:] = [None, helpText]  # For help entries
+						"default+headings": [  # data[1:] = [helpText]
+						50,  # itemHeight
 						[
-						MultiContentEntryText(pos = (0, 0), size = (1160, 50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (30, 0), size = (1130, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-						]),
-					# Extended help with no headings
-					# data[1:] = [helpText, extendedHelpText]
-					"extended": (50,  # itemHeight
+						MultiContentEntryText(pos=(0, 6), size=(1100, 57), font=0, text=1),
+						MultiContentEntryText(pos=(30, 6), size=(1070, 57), font=1, text=2),
+						]
+						],
+						# Extended help with no headings
+						# data[1:] = [helpText, extendedHelpText]
+						"extended": [
+						50,  # itemHeight
 						[
-						MultiContentEntryText(pos = (30, 0), size = (1130, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-						# MultiContentEntryText(pos = (75, 25), size = (1085, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-						]),
-					# Extended help with headings
-					# data[1:] = [heading, None, None]  # For heading entries
-					# data[1:] = [None, helpText, extendedHelpText]  # For help entries
-					"extended+headings": (50,  # itemHeight
+						MultiContentEntryText(pos=(0, 0), size=(1100, 45), font=2, text=1),
+						MultiContentEntryText(pos=(0, 60), size=(1100, 40), color=0x009e9fa4, font=3, text=2),
+						],
+						],
+						# Extended help with headings
+						# data[1:] = [heading, None, None]  # For heading entries
+						# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+						"extended+headings": [
+						50,  # itemHeight
 						[
-						MultiContentEntryText(pos = (0, 0), size = (1160, 50), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (30, 0), size = (1130, 50), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-						# MultiContentEntryText(pos = (75, 25), size = (1085, 50), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
-						]),
+						MultiContentEntryText(pos=(0, 14), size=(1100, 48), font=0, text=1),
+						MultiContentEntryText(pos=(30, 0), size=(1070, 45), font=2, text=2),
+						MultiContentEntryText(pos=(30, 45), size=(1070, 40), color=0x009e9fa4, font=3, text=3),
+						],
+						],
 					},
-				"fonts": [gFont("Regular", 32), gFont("Regular", 30), gFont("Regular", 30)],
-				"itemHeight": 50
-				}
+					"fonts": [gFont("Regular", 32), gFont("Regular", 30), gFont("Regular", 30), gFont("Regular", 30)],
+					"itemHeight": 50
+					}
 			</convert>
 		</widget>
-		<widget name="longshift_key0" position="30,870" size="720,34" font="Regular; 30" halign="left" transparent="1" backgroundColor="black" />
-		<widget name="longshift_key1" position="30,920" size="720,34" font="Regular; 30" halign="left" transparent="1" backgroundColor="black" />
-		<widget name="description" conditional="description" position="30,570" size="720,266" itemHeight="38" font="Regular;30" valign="top" />
  	</screen>
 
 	<!-- PPanel -->
