@@ -412,13 +412,14 @@
 	</screen>
 
 	<!-- Remote control templates -->
+
 	<screen name="RcPanel">
 		<widget name="rc" pixmap="rc.png" position="0,0" zPosition="10" size="154,500" alphatest="blend" backgroundColor="black" transparent="1" />
 		<widget name="arrowdown" conditional="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="blend"/><!-- belongs to old HelpMenu -->
 		<widget name="arrowdown2" conditional="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="blend"/><!-- belongs to old HelpMenu -->
 		<widget name="arrowup" pixmap="arrowup.png" conditional="arrowdown" position="-100,-100" size="37,70" zPosition="11" alphatest="blend"/><!-- belongs to old HelpMenu -->
 		<widget name="arrowup2" conditional="arrowdown" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="blend"/><!-- belongs to old HelpMenu -->
-        <widget alphatest="blend" name="indicatorU0" conditional="indicatorU0" pixmap="yellow_circle23x23.png" position="0,0" offset="11,11" size="23,23" zPosition="11" scale="1"/>
+		<widget alphatest="blend" name="indicatorU0" conditional="indicatorU0" pixmap="yellow_circle23x23.png" position="0,0" offset="11,11" size="23,23" zPosition="11" scale="1"/>
 		<widget alphatest="blend" name="indicatorU1" conditional="indicatorU0" pixmap="yellow_circle23x23.png" position="0,0" offset="11,11" size="23,23" zPosition="11" scale="1"/>
 		<widget alphatest="blend" name="indicatorU2" conditional="indicatorU0" pixmap="yellow_circle23x23.png" position="0,0" offset="11,11" size="23,23" zPosition="11" scale="1"/>
 		<widget alphatest="blend" name="indicatorU3" conditional="indicatorU0" pixmap="yellow_circle23x23.png" position="0,0" offset="11,11" size="23,23" zPosition="11" scale="1"/>
