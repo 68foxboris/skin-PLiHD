@@ -1263,6 +1263,7 @@
 
 	<screen name="ShoutcastTemplate">
 		<panel name="PigLessTemplate"/>
+		<panel name="OKTemplate"/>
 		<widget name="cover" position="60,140" size="592,562" zPosition="2"/>
 	</screen>
 
@@ -2214,10 +2215,10 @@
 	<screen name="LCDdisplayFile" position="fill" flags="wfNoBorder" title="Select File/Dir...">
 		<panel name="BasicTemplate"/>
 		<ePixmap pixmap="buttons/green.png" position="628,1032" size="34,34" alphatest="blend"/>
-		<eLabel text="Select" position="678,1030" size="400,45" font="Regular;34" foregroundColor="foreground" transparent="1" halign="left"/>
+		<eLabel text="Select" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" horizontalAlignment="left"/>
 		<widget name="LCDfile" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 			scrollbarWidth="6" scrollbarBorderWidth="1" scrollbarForegroundColor="blue" scrollbarBorderColor="blue" scrollbarBackgroundPixmap="infobar/scrollbar.png" scrollbarForegroundPixmap="infobar/scrlbr.png"/>
-		<widget source="File" render="Label" position="7,983" size="1890,30" font="Regular;27" foregroundColor="secondFG" halign="center"/>
+		<widget source="File" render="Label" position="7,568" size="715,396" font="Regular;33" foregroundColor="secondFG" verticalAlignment="center" horizontalAlignment="center"/>
 	</screen>
 
 	<!-- ZapHistoryBrowser -->
@@ -2318,7 +2319,7 @@
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
 		<widget name="speed" position="72,105" size="110,40" font="Regular;30" backgroundColor="secondBG" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
-		
+
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1467,107" size="50,32" zPosition="2" alphatest="on">
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide"/>
