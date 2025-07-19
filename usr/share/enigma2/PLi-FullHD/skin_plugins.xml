@@ -588,7 +588,7 @@
 
 	<screen name="EPGImportSources" position="fill" title="EPG Import Sources" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget name="list" position="780,100" size="1110,912" itemHeight="45" font="Regular;28" scrollbarMode="showOnDemand"/>
+		<widget name="list" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- EPG Import Log -->
@@ -1297,7 +1297,7 @@
 		<panel name="ShoutcastTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<widget name="headertext" position="780,150" size="1110,34" zPosition="1" font="Regular;30" transparent="1"/>
-		<widget name="statustext" position="780,510" size="1110,135" zPosition="1" font="Regular;30" halign="center" valign="center" transparent="0"/>
+		<widget name="statustext" position="780,510" size="1110,135" zPosition="1" font="Regular;30" horizontalAlignment="center" verticalAlignment="center" transparent="0"/>
 		<widget name="list" position="780,210" size="1110,727" zPosition="2" scrollbarMode="showOnDemand" transparent="0"/>
 		<widget name="titel" position="30,715" size="720,93" zPosition="1" font="Regular;27" transparent="1"/>
 		<widget name="station" position="30,815" size="720,62" zPosition="1" font="Regular;27" foregroundColor="secondFG" transparent="1"/>
@@ -1656,10 +1656,10 @@
 			<convert type="TransponderInfo"></convert>
 		</widget>
 		<widget source="Service" render="Label" position="30,577" size="720,32" transparent="1" foregroundColor="secondFG" font="Regular;28" horizontalAlignment="left">
-			<convert type="EventInfo">Name</convert>
+			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Service" render="Label" position="30,624" size="720,224" transparent="1" font="Regular;28" horizontalAlignment="block">
-			<convert type="EventInfo">FullDescription</convert>
+			<convert type="EventName">FullDescription</convert>
 		</widget>
 		<widget source="Service" render="NextEpgInfo" position="30,863" size="720,90" transparent="1" font="Regular;26" noWrap="1" NumberOfItems="3" noLabel="1" foregroundColor="secondFG" timeColor="grey" numOfSpaces="2"/>
 	</screen>

@@ -345,29 +345,29 @@
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="270,978" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" horizontalAlignment="left">
-			<convert type="EventInfo">StartTime</convert>
+			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default;Proportional</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="397,978" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" horizontalAlignment="left">
-			<convert type="EventInfo">Name</convert>
+			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1440,978" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" horizontalAlignment="right">
-			<convert type="EventInfo">Remaining</convert>
+			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText"></convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="270,1023" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="left">
-			<convert type="EventInfo">StartTime</convert>
+			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default;Proportional</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="397,1023" size="1072,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36" horizontalAlignment="left">
-			<convert type="EventInfo">Name</convert>
+			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="1440,1023" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="right">
-			<convert type="EventInfo">Duration</convert>
+			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" pixmap="infobar/pbar.png" position="270,952" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
-			<convert type="EventInfo">Progress</convert>
+			<convert type="EventTime">Progress</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="1590,901" size="60,32" zPosition="3" alphaTest="on">
 			<convert type="ServiceInfo">IsStream</convert>
@@ -406,7 +406,7 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.Event_Now" render="Pixmap" pixmap="infobar/ico_pdc.png" position="1254,901" size="58,32" zPosition="2" alphaTest="on">
-			<convert type="EventInfo">Pdc</convert>
+			<convert type="EventName">Pdc</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/stream.png" position="1218,902" size="32,32" zPosition="3" alphaTest="on">
