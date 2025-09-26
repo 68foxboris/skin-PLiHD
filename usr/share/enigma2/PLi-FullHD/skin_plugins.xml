@@ -1356,7 +1356,6 @@
 		<widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphaTest="on"/>
 		<widget name="text" position="780,105" size="830,495" font="Regular;32"/>
 		<ePixmap pixmap="buttons/red.png" position="815,485" size="34,34" alphaTest="on"/>
-		<widget name="languagetext" position="877,486" size="165,38" font="Regular;34"/>
 		<widget source="list" render="Listbox" position="815,661" size="735,266" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
