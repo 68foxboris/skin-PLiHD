@@ -177,12 +177,12 @@
 			<pixmap filename="window/bottom_edge.png" pos="bpBottom"/>
 			<pixmap filename="window/bottom_right_corner.png" pos="bpBottomRight"/>
 		</borderset>
-		<borderset name="bsListboxEntry">
+		<!--borderset name="bsListboxEntry">
 			<pixmap filename="border/line.png" pos="bpTop"/>
 			<pixmap filename="border/line.png" pos="bpBottom"/>
 			<pixmap filename="border/vline.png" pos="bpLeft"/>
 			<pixmap filename="border/vline.png" pos="bpRight"/>
-		</borderset>
+		</borderset-->
 	</windowstyle>
 
 	<include filename="skin_templates.xml"/>
@@ -360,7 +360,6 @@
 
 	<screen name="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder">
 		<panel name="ChannelSelectionTemplate"/>
-		<panel name="KeyMenuInfoTemplate"/>
 	</screen>
 	<!-- Simple channelselection -->
 	<screen name="SimpleChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder">
@@ -484,10 +483,13 @@
 	<screen name="EventView" title="Eventview" position="fill" flags="wfNoBorder">
 		<panel name="SelectionTemplate"/>
 		<panel name="KeyMenuTemplate"/>
-		<widget name="epg_eventname" position="780,100" size="1110,70" transparent="1" font="Regular;30" horizontalAlignment="left" foregroundColor="foreground"/>
-		<widget name="FullDescription" position="780,176" size="1110,836" transparent="1" font="Regular;30" horizontalAlignment="block"/>
-		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" verticalAlignment="center" horizontalAlignment="center" transparent="1" zPosition="1">
-			<convert type="TransponderInfo"/>
+		<widget name="epg_eventname" position="800,115" size="1110,70" transparent="1" font="Regular;30" foregroundColor="secondFG" horizontalAlignment="left"/>
+		<widget name="FullDescription" position="800,175" size="1110,912" transparent="1" font="Regular;30" horizontalAlignment="block"/>
+		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" verticalAlignment="center" horizontalAlignment="left" transparent="1" zPosition="1">
+			<convert type="TransponderInfo"></convert>
+		</widget>
+		<widget source="Service" render="Label" position="600,525" size="150,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;26" horizontalAlignment="right">
+			<convert type="ServiceOrbitalPosition"/>
 		</widget>
 		<widget name="channel" position="30,592" size="720,45" transparent="1" font="Regular;33" horizontalAlignment="left"/>
 		<widget name="datetime" position="30,652" size="180,45" transparent="1" font="Regular;33" horizontalAlignment="left"/>
@@ -711,6 +713,49 @@
 
 	<screen	flags="wfNoBorder" name="menu_scan" position="fill">
 		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen flags="wfNoBorder" name="MenuHorizontal" title="Menu" position="center,400" size="1170,265" ignoreWidgets="menuimage" resolution="1280,720">
+		<widget source="menu" render="Listbox" position="10,10" size="e-20,115" listOrientation="horizontal">
+			<template name="Default" fonts="Regular;25" itemHeight="105" itemWidth="230">
+				<mode name="default">
+					<text index="NumberText" position="0,0" size="230,105" font="0" horizontalAlignment="center" padding="10" verticalAlignment="center" wrap="on" />
+				</mode>
+				<mode name="text">
+					<text index="Text" position="0,0" size="230,105" font="0" horizontalAlignment="center" padding="10" verticalAlignment="center" wrap="on" />
+				</mode>
+				<mode name="number">
+					<text index="Number" position="0,5" size="230,25" font="0" horizontalAlignment="center" verticalAlignment="center" />
+					<text index="Text" position="0,30" size="230,70" font="0" horizontalAlignment="center" padding="10" verticalAlignment="center" wrap="on" />
+				</mode>
+				<mode name="image">
+					<text index="Text" position="0,0" size="230,105" font="0" horizontalAlignment="center" padding="10" verticalAlignment="center" wrap="on" />
+				</mode>
+				<mode name="both">
+					<text index="Number" position="0,5" size="230,25" font="0" horizontalAlignment="center" verticalAlignment="center" />
+					<text index="Text" position="0,30" size="230,70" font="0" horizontalAlignment="center" padding="10" verticalAlignment="center" wrap="on" />
+				</mode>
+			</template>
+		</widget>
+		<widget source="description" render="Label" position="10,e-130" size="e-20,70" font="Regular;20" padding="10" verticalAlignment="center" widgetBorderColor="#00999999" widgetBorderWidth="1" />
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="390,e-50" size="180,40" backgroundColor="key_yellow" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Label" position="580,e-50" size="180,40" backgroundColor="key_blue" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_menu" render="Label" position="e-200,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
 	</screen>
 
 	<!-- Setup Configs -->
@@ -1598,25 +1643,18 @@
 	<screen name="RemoteControlTemplate">
 		<panel position="right" size="154,*">
 			<panel position="top" size="*,50"/>
-			<panel position="top" size="154,500">
-				<panel name="RcPanel"/>
-			</panel>
+			<widget name="rc" pixmaps="rc.png,rcold.png" position="top" zPosition="10" size="154,500" alphaTest="blend"/>
+			<widget name="arrowdown" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphaTest="blend"/>
+			<widget name="arrowdown2" pixmap="arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphaTest="blend"/>
+			<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphaTest="blend"/>
+			<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphaTest="blend"/>
 		</panel>
 	</screen>
 	<screen name="WizardPictureLangTemplate">
 		<panel position="top" size="*,50"/>
 		<panel position="top" size="*,50">
-			<eLabel text="&lt;&lt;&lt;" position="left" zPosition="0" size="75,34" transparent="1" alphaTest="blend" font="Regular;34"/>
-			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="34,34" transparent="1" alphaTest="blend"/>
-			<panel position="left" size="16,*"/>
-			<eLabel text="&gt;&gt;&gt;" position="right" zPosition="0" size="75,34" transparent="1" alphaTest="blend" font="Regular;34" halign="right"/>
-			<ePixmap pixmap="buttons/blue.png" position="right" zPosition="0" size="34,34" transparent="1" alphaTest="blend"/>
-			<panel position="right" size="16,*"/>
-		</panel>
-		<panel position="bottom" size="*,50"/>
-		<panel position="bottom" size="*,50">
-			<ePixmap pixmap="buttons/yellow.png" position="left" zPosition="0" size="34,34" transparent="1" alphaTest="blend"/>
-			<panel position="left" size="16,*"/>
+			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphaTest="blend"/>
+			<widget name="languagetext" position="fill" font="Regular;34"/>
 		</panel>
 	</screen>
 	<!-- it's the same screen... -->
@@ -1726,6 +1764,7 @@
 		</widget>
 		<widget name="config" valueFont="Regular;28" position="127,655" size="637,270" itemHeight="38" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<ePixmap pixmap="buttons/red.png" position="810,485" size="34,34" alphaTest="on"/>
+		<widget name="languagetext" position="860,485" size="165,34" font="Regular;28"/>
 		<widget name="wizard" pixmap="wizard.png" position="811,120" size="165,261" zPosition="10" alphaTest="on"/>
 		<widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphaTest="on"/>
 	</screen>

@@ -16,7 +16,6 @@
 
 	<screen name="PartnerboxEntriesListConfigScreen" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="KeyMenuInfoTemplate"/>
 		<panel name="KeyPrevNextTemplate_Hideable"/>
 		<widget name="name" position="780,105" size="150,36" font="Regular;30" horizontalAlignment="left" backgroundColor="secondBG" transparent="1"/>
 		<widget name="ip" position="960,105" size="225,36" font="Regular;30" horizontalAlignment="left" backgroundColor="secondBG" transparent="1"/>
@@ -839,39 +838,7 @@
 	<screen flags="wfNoBorder" name="meteoViewerCfg" position="fill" title="MeteoViewer Configuration">
 		<panel name="PigTemplate"/>
 		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,705" itemHeight="38" font="Regular;28" transparent="1" scrollbarMode="showOnDemand"/>
-		<widget name="statusbar" position="780,975" size="1110,34" font="Regular;30" backgroundColor="background" halign="center"/>
-	</screen>
-
-	<!-- CzechMeteo -->
-
-	<screen name="PigCzechMeteoViewerTemplate">
-		<panel name="BasicTemplate"/>
-		<widget source="session.VideoPicture" render="Pig" position="30,120" size="672,378" backgroundColor="transparent" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="30,90" size="672,32" zPosition="1" foregroundColor="secondFG" font="Regular;25" borderColor="black" noWrap="1" valign="center" halign="center">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<ePixmap pixmap="logos/pli_transp.png" position="30,967" size="180,51" alphatest="on"/>
-	</screen>
-
-	<screen flags="wfNoBorder" name="czechMeteo" position="fill" title="meteoViewer">
-		<panel name="PigCzechMeteoViewerTemplate"/>
-		<panel name="KeyMenuTemplate"/>
-		<ePixmap position="1312,105" size="18,10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MeteoViewer/pictures/top.png" zPosition="4" alphatest="on"/>
-		<ePixmap position="1312,895" size="18,10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MeteoViewer/pictures/bottom.png" zPosition="4" alphatest="on"/>
-		<ePixmap position="732,505" size="10,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MeteoViewer/pictures/left.png" zPosition="4" alphatest="on"/>
-		<ePixmap position="1882,505" size="10,18" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MeteoViewer/pictures/right.png" zPosition="4" alphatest="on"/>
-
-		<widget name="frames" position="732,105" size="1160,800" zPosition="1" alphatest="blend"/>
-		<widget name="border" position="732,105" zPosition="2" size="1160,800" alphatest="blend"/>
-		<widget name="mer" position="732,105" zPosition="3" size="1160,800" alphatest="blend"/>
-
-		<widget name="download" position="922,929" zPosition="8" borderWidth="1" size="112,18" backgroundColor="background"/>
-
-		<widget name="msg" position="742,920" size="600,30" font="Regular;27" backgroundColor="#31000000"/>
-		<widget name="slide" position="1422,935" zPosition="5" borderWidth="1" size="450,9" backgroundColor="background"/>
-		<ePixmap pixmap="buttons/key_tv.png" position="740,970" size="52,38" alphatest="on"/>
-		<eLabel text="- Synaptic" position="802,972" size="300,45" backgroundColor="secondBG" font="Regular;27" halign="left" transparent="1" zPosition="1"/>
-		<widget name="description" position="30,560" size="672,290" font="Regular;25" foregroundColor="foreground" halign="left"/>
+		<widget name="statusbar" position="885,975" size="900,34" font="Regular;30" backgroundColor="#31000000"/>
 	</screen>
 
 	<!-- CSSF plugin -->
@@ -923,7 +890,7 @@
 		<widget name="label8" position="780,357" size="1110,36" font="Regular;30" verticalAlignment="center"/>
 	</screen>
 
-	<screen name="CSFDVirtualKeyboard" position="fill" title="Virtuální klávesnice pro CSFD" flags="wfNoBorder">
+	<screen name="CSFDVirtualKeyBoard" position="fill" title="Virtuální klávesnice pro CSFD" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="ButtonYellow"/>
 		<widget name="header" position="780,105" size="1110,45" font="Regular;36" transparent="1" noWrap="1" horizontalAlignment="left"/>
@@ -1072,8 +1039,6 @@
 
 	<screen name="xpowerEdit" position="fill" title="XPower Configuration PC" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<panel name="VKeyIconPanel"/>
-		<widget name="HelpWindow" position="center,580" size="80,0"/>
 		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,375" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="0" pixmaps="buttons/button_green_off.png,buttons/button_green.png" position="885,153" zPosition="10" size="22,24" transparent="1" alphaTest="on"/>
 		<widget name="statusbar" position="780,450" size="1110,34" font="Regular;30"/>
@@ -1356,6 +1321,7 @@
 		<widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphaTest="on"/>
 		<widget name="text" position="780,105" size="830,495" font="Regular;32"/>
 		<ePixmap pixmap="buttons/red.png" position="815,485" size="34,34" alphaTest="on"/>
+		<widget name="languagetext" position="877,486" size="165,38" font="Regular;34"/>
 		<widget source="list" render="Listbox" position="815,661" size="735,266" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
@@ -2216,7 +2182,6 @@
 	</screen>
 
 	<!-- LCD4linux -->
-
 	<screen name="LCDdisplayConfig" position="fill" flags="wfNoBorder">
 		<panel name="KeyMenuTemplate"/>
 		<widget name="config" position="923,123" size="996,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
@@ -2239,7 +2204,6 @@
 	</screen>
 	<screen name="LCDdisplayFile" position="fill" flags="wfNoBorder" title="Select File/Dir...">
 		<panel name="BasicTemplate"/>
-		<ePixmap pixmap="buttons/green.png" position="628,1032" size="34,34" alphatest="blend"/>
 		<eLabel text="Select" position="425,1023" size="400,45" font="buttons;33" foregroundColor="buttongreen" backgroundColor="secondBG" transparent="1" horizontalAlignment="left"/>
 		<widget name="LCDfile" position="780,123" size="1132,855" font="Regular;33" itemHeight="45" scrollbarMode="showOnDemand" foregroundColor="grey" enableWrapAround="1"
 			scrollbarWidth="6" scrollbarBorderWidth="1" scrollbarForegroundColor="blue" scrollbarBorderColor="blue" scrollbarBackgroundPixmap="infobar/scrollbar.png" scrollbarForegroundPixmap="infobar/scrlbr.png"/>
@@ -2306,60 +2270,5 @@
 	<screen name="AutomaticVolumeAdjustmentEntryConfigScreen" position="fill">
 		<panel name="PigTemplate"/>
 		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
-	</screen>
-
-	<!-- M3UIPTV -->
-	<screen name="M3UIPTVManagerConfig" position="fill" flags="wfNoBorder">
-		<panel name="PigTemplate"/>
-		<panel name="DescriptionTemplate"/>
-		<widget conditional="progress" source="progress" render="Progress" position="30,542" size="720,18" backgroundColor="background" foregroundColor="blue" zPosition="11" borderWidth="0" borderColor="grey" cornerRadius="5"/>
-		<widget source="list" render="Listbox" position="780,105" size="1110,900" transparent="1" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (60,0), size = (1035,60), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1) ],
-					"fonts": [gFont("Regular",36)],
-					"itemHeight": 60
-				}
-			</convert>
-		</widget>
-	</screen>
-
-	<screen name="M3UIPTVVoDMovies" position="fill" flags="wfNoBorder">
-		<panel name="M3UIPTVManagerConfig"/>
-	</screen>
-
-	<screen name="CatchupPlayer" position="150,67" size="1620,150" backgroundColor="transparent" flags="wfNoBorder">
-		<widget source="session.CurrentService" render="Label" position="center,6" size="1248,74" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;36" borderColor="black" valign="center" halign="center">
-			<convert type="ServiceName">NameOnly</convert>
-		</widget>
-		<widget source="progress" render="Progress" backgroundColor="un33333a" pixmap="dvr/position_pointer1024.png" foregroundColor="#00489AC3" position="center,84" zPosition="4" size="1536,16" transparent="1"/>
-		<widget name="time_elapsed" position="42,44" size="150,37" backgroundColor="transparent" foregroundColor="foreground" font="Regular;33" borderWidth="2" borderColor="black" valign="center" halign="left" zPosition="50"/>
-		<widget name="time_remaining" position="e-42-150,44" size="150,37" backgroundColor="transparent" foregroundColor="foreground" font="Regular;33" borderWidth="2" borderColor="black" valign="center" halign="right" zPosition="50"/>
-		<widget source="session.RecordState" render="Pixmap" pixmap="buttons/rec.png" position="1590,79" size="30,30" zPosition="3" alphatest="blend">
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="1428,4" size="150,37" backgroundColor="transparent" noWrap="1" zPosition="1" foregroundColor="foreground" font="Regular;33" valign="center" halign="right">
-			<convert type="ClockToText">Format:%-H:%M</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="c-109,105" size="219,31" zPosition="2" backgroundColor="transparent" foregroundColor="foreground" font="Regular;30" borderWidth="2" valign="top" halign="center">
-			<convert type="PliExtraInfo">ResolutionString</convert>
-		</widget>
-		<widget name="speed" position="72,105" size="110,40" font="Regular;30" backgroundColor="secondBG" borderWidth="3" borderColor="black" transparent="1" zPosition="5"/>
-
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_dolby_on.png" position="1467,107" size="50,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsMultichannel</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_hd.png" position="1518,107" size="60,32" zPosition="4" alphatest="on">
-			<convert type="ServiceInfo">IsHD</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_16_9.png" position="1518,107" size="60,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="infobar/ico_format_4_3.png" position="1518,107" size="60,32" zPosition="2" alphatest="on">
-			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
-			<convert type="ConditionalShowHide"/>
-		</widget>
 	</screen>
 </skin>
