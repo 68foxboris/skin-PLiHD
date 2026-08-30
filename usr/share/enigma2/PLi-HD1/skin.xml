@@ -377,10 +377,10 @@
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="20,515" size="480,26" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
+    <widget source="Event" render="Label" position="20,515" size="480,26" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
       <convert type="EventName">Genre</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="20,555" size="480,26" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
+    <widget source="Event" render="Label" position="20,555" size="480,26" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
       <convert type="EventName">Rating</convert>
     </widget>
     <!--widget source="Event" render="Label" position="20,600" size="50,26" font="Regular;16" backgroundColor="secondBG" zPosition="1" transparent="1" foregroundColor="foreground" horizontalAlignment="left">
@@ -1081,9 +1081,9 @@
     <widget name="checkList" position="520,70" size="740,600" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
   </screen>
 
-  <!-- Opkg installer -->
+  <!-- Ipkg installer -->
 
-  <screen name="OpkgInstaller" position="fill" flags="wfNoBorder">
+  <screen name="IpkgInstaller" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate"/>
     <eLabel text="Install extensions" position="20,5" size="1220,50" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" verticalAlignment="center" horizontalAlignment="left"/>
     <widget name="list" position="520,70" size="740,540" backgroundColor="background" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
@@ -1971,7 +1971,7 @@ for x in self.additionalWidgets:
 
   <screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate"/>
-    <widget name="menu" position="520,70" size="740,200" zPosition="1" />
+    <widget name="menu" position="520,70" size="740,225" zPosition="1" />
     <widget name="info" position="530,70" size="740,25" font="Regular;22" horizontalAlignment="center" transparent="1" zPosition="2"/>
   </screen>
 
@@ -2028,6 +2028,19 @@ for x in self.additionalWidgets:
     <widget name="config" position="520,70" size="740,200" scrollbarMode="showOnDemand"/>
     <widget name="statusbar" position="520,330" size="740,20" font="Regular;18"/>
     <widget name="status" position="520,355" size="740,140" font="Console;16"/>
+  </screen>
+
+  <screen name="ArchiveFilter" position="fill" flags="wfNoBorder">
+    <panel name="PigTemplate"/>
+    <widget name="config" position="520,105" size="740,150" scrollbarMode="showOnDemand"/>
+    <widget name="description" position="20,380" size="480,92" font="Regular;20" valign="top"/>
+  </screen>
+
+  <screen name="ArchiveList" position="fill" flags="wfNoBorder">
+    <panel name="PigTemplate"/>
+    <widget name="list" position="520,70" size="740,600" scrollbarMode="showOnDemand"/>
+    <widget name="message" position="520,70" size="740,600" font="Regular;28" halign="center" valign="center" transparent="1"/>
+     <widget name="preview" position="20,380" size="480,200" itemHeight="20" font="Regular;18"/>
   </screen>
 
   <!-- Picture-Player -->
