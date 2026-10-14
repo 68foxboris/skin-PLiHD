@@ -17,10 +17,12 @@
 		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
 		<font name="Fixed" filename="andale.ttf" scale="100"/>
 		<font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100"/>
+
+		<!-- enigma2icons -->
 		<font name="enigma2icons" filename="enigma2icons.ttf" scale="100" />
-		<alias name="MovieListIcons" font="enigma2icons" size="30" />
+		<!--alias name="MovieListIcons" font="enigma2icons" size="30" />
 		<alias name="FileListIcons" font="enigma2icons" size="24" />
-		<alias name="ChoiceListIcons" font="enigma2icons" size="24" />
+		<alias name="ChoiceListIcons" font="enigma2icons" size="24" /-->
 		<alias name="ChoiceList" font="Regular" size="30" height="38"/>
 		<alias name="TextNormal" font="Regular" size="28" height="38"/>
 		<alias name="ChoiceBoxDescription" font="Regular" size="22" height="25"/>
@@ -108,15 +110,16 @@
     		<!-- Allow User Dates And Times Display -->
     		<parameter name="AllowUserDatesAndTimesDisplay" value="1,1"/>
     		<!-- MovieListNativeIcons -->
-    		<parameter name="MovieListNativeIcons" value="1" />
+		<!-- enigma2icons -->
+		<!--parameter name="MovieListNativeIcons" value="1" />
 		<parameter name="MovieListIcon_folder" value="59828,yellow,yellow" />
 		<parameter name="MovieListIcon_record" value="60038,red,red" />
 		<parameter name="MovieListIcon_play_record" value="60039,red,red" />
 		<parameter name="MovieListIcon_part_2_4" value="60035,accent,accent" />
-		<!-- ChoiceListNative -->
+
 		<parameter name="ChoiceListNative" value="1" />
 		<parameter name="ChoiceListIcon_red" value="0xEA12" />
-		<parameter name="ChoiceListIcon_menu" value="0xE911" />
+		<parameter name="ChoiceListIcon_menu" value="0xE911" /-->
     		<!-- PluginList -->
     		<parameter name="PluginBrowserIcon" value="10,17,100,40" />
     		<parameter name="PluginBrowserName" value="125,5,40" />
@@ -479,7 +482,7 @@
 		<widget name="duration" position="30,712" size="720,45" transparent="1" font="Regular;33" horizontalAlignment="left"/>
 		<widget source="session.Event_Now" render="Label" position="135,712" size="285,45" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;32" horizontalAlignment="right">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">OnlyMinute</convert>
 		</widget>
 		<widget source="Event" render="Label" position="30,772" size="720,35" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;32" horizontalAlignment="left">
 			<convert type="EventName">Genre</convert>
@@ -1125,7 +1128,7 @@
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1430,918" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" horizontalAlignment="right">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">OnlyMinute</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="260,963" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="left">
 			<convert type="EventTime">StartTime</convert>
@@ -1712,7 +1715,7 @@
 		<panel position="top" size="*,50"/>
 		<panel position="top" size="*,50">
 			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphaTest="blend"/>
-			<widget name="languagetext" position="fill" font="Regular;34"/>
+			<widget name="languagetext" position="fill" font="Regular;34" conditional="languagetext"/>
 		</panel>
 	</screen>
 	<!-- it's the same screen... -->
@@ -1826,7 +1829,7 @@
 		</widget>
 		<widget name="config" valueFont="Regular;28" position="127,655" size="637,270" itemHeight="38" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<ePixmap pixmap="buttons/red.png" position="810,485" size="34,34" alphaTest="on"/>
-		<widget name="languagetext" position="860,485" size="165,34" font="Regular;28"/>
+		<widget name="languagetext" position="860,485" size="165,34" font="Regular;28" conditional="languagetext"/>
 		<widget name="wizard" pixmap="wizard.png" position="811,120" size="165,261" zPosition="10" alphaTest="on"/>
 		<widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphaTest="on"/>
 	</screen>
@@ -2712,6 +2715,7 @@ for x in self.additionalWidgets:
 		<panel name="PigTemplate"/>
 		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
+		<widget name="footnote" position="30,930" size="720,40" font="Regular;30" foregroundColor="red" horizontalAlignment="center" verticalAlignment="center"/>
 	</screen>
 
 	<!-- Positioner setup -->
